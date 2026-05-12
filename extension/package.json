@@ -1,0 +1,32 @@
+{
+  "name": "spira-lang",
+  "displayName": "Spira",
+  "description": "Support du langage de programmation Spira (.sp) — coloration syntaxique, commentaires, brackets",
+  "version": "1.1.0",
+  "publisher": "luther",
+  "engines": { "vscode": "^1.60.0" },
+  "categories": ["Programming Languages"],
+  "keywords": ["spira", "sp", "français", "programmation", "universel"],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/LutHub-cmd/spira"
+  },
+  "contributes": {
+    "languages": [
+      {
+        "id": "spira",
+        "aliases": ["Spira", "spira"],
+        "extensions": [".sp"],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "spira",
+        "scopeName": "source.spira",
+        "path": "./syntaxes/spira.tmLanguage.json"
+      }
+    ],
+    "themes": []
+  }
+}

@@ -1,0 +1,24 @@
+— Exemple 2 : Devinette par dichotomie
+soit secret = 73
+soit min    = 0
+soit max    = 100
+soit trouvé = faux
+soit essais = 0
+afficher "Je cherche le nombre secret..."
+tantque non trouvé et essais < 10 répéter
+  soit tentative = (min + max) / 2
+  essais = essais + 1
+  afficher "Essai " + essais + " → " + tentative
+  si tentative == secret alors
+    trouvé = vrai
+    afficher "Trouvé en " + essais + " essais !"
+  sinon
+    si tentative < secret alors
+      afficher "Trop bas."
+      min = tentative + 1
+    sinon
+      afficher "Trop haut."
+      max = tentative - 1
+    fin
+  fin
+fin

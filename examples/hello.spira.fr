@@ -1,0 +1,4 @@
+— Exemple 1 : Bonjour le monde
+soit prénom = "Luther"
+afficher "Bonjour " + prénom + " !"
+afficher "Bienvenue dans Spira v0.2."

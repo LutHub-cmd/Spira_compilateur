@@ -1,0 +1,40 @@
+— Exemple 4 : Les fonctions
+
+— Fonction simple avec un paramètre
+faire saluer avec prénom
+  donner "Bonjour " + prénom + " !"
+fin
+
+— Fonction avec deux paramètres
+faire additionner avec a, b
+  donner a + b
+fin
+
+— Fonction sans retour (effet pur)
+faire séparateur
+  afficher "────────────────────────"
+fin
+
+— Fonction qui utilise d'autres fonctions
+faire présenter avec prénom, âge
+  soit msg = saluer(prénom)
+  afficher msg
+  afficher "Tu as " + âge + " ans."
+fin
+
+— Programme principal
+séparateur()
+présenter("Luther", 25)
+séparateur()
+
+soit résultat = additionner(15, 27)
+afficher "15 + 27 = " + résultat
+
+— Fonctions dans une boucle
+séparateur()
+soit i = 1
+tantque i <= 3 répéter
+  afficher saluer("Personne " + i)
+  i = i + 1
+fin
+séparateur()

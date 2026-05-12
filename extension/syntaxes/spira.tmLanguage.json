@@ -1,0 +1,99 @@
+{
+  "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+  "name": "Spira",
+  "scopeName": "source.spira",
+  "fileTypes": ["sp"],
+  "patterns": [
+    { "include": "#directive" },
+    { "include": "#comment" },
+    { "include": "#string" },
+    { "include": "#keyword-control" },
+    { "include": "#keyword-declaration" },
+    { "include": "#keyword-type" },
+    { "include": "#builtin-function" },
+    { "include": "#boolean" },
+    { "include": "#number" },
+    { "include": "#operator" },
+    { "include": "#identifier" }
+  ],
+  "repository": {
+    "directive": {
+      "match": "^@\\w+.*$",
+      "name": "meta.preprocessor.spira",
+      "captures": {
+        "0": { "name": "keyword.other.directive.spira" }
+      }
+    },
+    "comment": {
+      "patterns": [
+        {
+          "match": "—.*$",
+          "name": "comment.line.spira"
+        },
+        {
+          "match": "//.*$",
+          "name": "comment.line.double-slash.spira"
+        },
+        {
+          "match": "#.*$",
+          "name": "comment.line.hash.spira"
+        }
+      ]
+    },
+    "string": {
+      "begin": "\"",
+      "end": "\"",
+      "name": "string.quoted.double.spira",
+      "patterns": [
+        {
+          "match": "\\\\.",
+          "name": "constant.character.escape.spira"
+        }
+      ]
+    },
+    "keyword-control": {
+      "match": "\\b(si|alors|sinon|fin|tantque|répéter|essayer|attraper|comme|pour|chaque|dans|lancer)\\b",
+      "name": "keyword.control.spira"
+    },
+    "keyword-declaration": {
+      "match": "\\b(soit|faire|donner|avec|utiliser|retourner|type|nouveau)\\b",
+      "name": "keyword.declaration.spira"
+    },
+    "keyword-type": {
+      "match": "\\b(tester|vérifier|que)\\b",
+      "name": "keyword.other.testing.spira"
+    },
+    "builtin-function": {
+      "match": "\\b(afficher|taille|longueur|majuscules|minuscules|contient|découper|remplacer|commence_par|finit_par|sous_texte|coller|nombre|texte|arrondir|arrondir_bas|arrondir_haut|racine|absolu|puissance|aléatoire|minimum|maximum|trier|trier_par|trier_par_décroissant|inverser|sous_liste|clés|valeurs|possède|demander|lire_fichier|écrire_fichier|ajouter_fichier|fichier_existe|supprimer_fichier|lister_dossier|date_actuelle|heure_complete|année_actuelle|mois_actuel|jour_actuel|heure_actuelle|minute_actuelle|seconde_actuelle|horodatage|correspond_regex|trouver_regex|remplacer_regex|appliquer_à_chaque|filtrer_par|réduire)\\b",
+      "name": "support.function.builtin.spira"
+    },
+    "boolean": {
+      "match": "\\b(vrai|faux|Rien)\\b",
+      "name": "constant.language.spira"
+    },
+    "number": {
+      "match": "\\b\\d+(\\.\\d+)?\\b",
+      "name": "constant.numeric.spira"
+    },
+    "operator": {
+      "patterns": [
+        {
+          "match": "\\b(et|ou|non)\\b",
+          "name": "keyword.operator.logical.spira"
+        },
+        {
+          "match": "(==|!=|<=|>=|<|>|\\+=|-=|\\*=|/=)",
+          "name": "keyword.operator.comparison.spira"
+        },
+        {
+          "match": "(\\+|-|\\*|/|%|=)",
+          "name": "keyword.operator.arithmetic.spira"
+        }
+      ]
+    },
+    "identifier": {
+      "match": "\\b[a-zA-ZÀ-ÿ_][a-zA-ZÀ-ÿ0-9_]*\\b",
+      "name": "variable.other.spira"
+    }
+  }
+}

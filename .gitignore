@@ -1,0 +1,23 @@
+cat > .gitignore << 'EOF'
+# Node.js
+node_modules/
+npm-debug.log
+
+# Spira — fichiers générés
+output/
+spira_paquets/
+
+# Système
+.DS_Store
+Thumbs.db
+.env
+
+# IDE et outils locaux
+.vscode/settings.json
+.idea/
+*.swp
+.claude/
+
+# Fichiers compilés
+*.compiled.js
+EOF

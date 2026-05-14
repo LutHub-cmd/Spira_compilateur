@@ -1,4 +1,1 @@
-echo"*.sp linguist-language="Spira"> .gitattributes
-git add .gitattributes
-git commit -m "Reconnaître .sp comme Spira"
-git push
+*.sp linguist-language=Spira
